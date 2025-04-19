@@ -33,6 +33,10 @@ header {
     z-index: 1000;
 }
 
+.menu-toggle {
+    display: none; /* Hide by default */
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -653,16 +657,37 @@ footer {
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
+        align-items: flex-start;
     }
     
     .nav-links {
-        margin-top: 20px;
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Initially hide the menu */
     }
     
     .nav-links li {
-        margin: 0 15px;
+        margin: 10px 0;
     }
-    
+
+    .nav-links a {
+        padding: 10px 15px;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: var(--dark);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show the menu when active */
+    }
+
     .value-item, .stat-item {
         width: 100%;
     }

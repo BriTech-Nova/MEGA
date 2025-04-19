@@ -13,8 +13,10 @@
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <div class="logo-text"><span>MEGA</span> MOTIVE</div>
+                    <img src="{% static 'mega_motive/images/logo.jpg' %}" alt="Logo">
+                    <span class="logo-text">MEGA <span>MOTIVE</span></span>
                 </div>
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
@@ -78,6 +80,7 @@
         </div>
     </footer>
 
+    <script src="{% static 'mega_motive/js/scripts.js' %}"></script>
     {% block extra_js %}{% endblock %}
 </body>
 </html>
