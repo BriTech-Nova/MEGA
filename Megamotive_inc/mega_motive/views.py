@@ -13,6 +13,7 @@ def home(request):
             messages.success(request, 'Your message has been sent successfully!')
             return redirect('home')  # Changed to 'home' assuming this is the correct URL name
         else:
+            print(form.errors)  # Debugging: Print form errors to the console
             messages.error(request, 'There was an error sending your message. Please try again.')
     else:
         form = ContactForm()
