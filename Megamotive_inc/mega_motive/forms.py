@@ -1,6 +1,9 @@
 from django import forms
 from .models import ContactMessage
-
+'''
+ContactForm class for creating a contact form.
+This form is used to collect user input for contact messages.
+'''
 class ContactForm(forms.ModelForm):
     class Meta:
         model = ContactMessage

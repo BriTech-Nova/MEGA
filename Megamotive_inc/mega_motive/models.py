@@ -1,5 +1,8 @@
 from django.db import models
-
+'''
+ContactForm model for storing contact messages.
+This model is used to create a contact form that allows users to send messages.
+'''
 class ContactMessage(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()

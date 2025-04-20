@@ -1,5 +1,9 @@
 from django.contrib import admin
 from .models import ContactMessage
+'''
+Admin interface for managing contact messages.
+This admin interface allows administrators to view, search, and filter contact messages.
+'''
 
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
